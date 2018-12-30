@@ -1,8 +1,9 @@
-# micro-c
+# micro-go
+
 ## Frontend - Web microservices in go
 Backend: https://github.com/theloox/micro-go
 
-### What it is it
+### What it is
 An example of how to build microservices in go
 They communicate with each other, and ask for data
 
