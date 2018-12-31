@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {
-  //MenuItem,
+  Collapse,
+  Glyphicon,
+  MenuItem,
   Nav,
   Navbar,
-  //NavDropdown,
+  NavDropdown,
   NavItem,
   //NavLink
 } from "react-bootstrap";
@@ -14,7 +16,111 @@ import './App.css';
 import logo from './img/logo.png';
 
 
+const invoices = [
+  {
+    name: "Agregar",
+    path: "/agregar",
+    key: 2.1
+  },
+  {
+    name: "Consultar",
+    path: "/consultar",
+    key: 2.2
+  },
+  {
+    name: "Actualizar",
+    path: "/actualizar",
+    key: 2.3
+  },
+  {
+    name: "Borrar",
+    path: "/borrar",
+    key: 2.4
+  },
+];
+
+const reports = [
+  {
+    name: "Todos",
+    path: "/todos",
+    key: 3.1
+  },
+  {
+    name: "Por cliente",
+    path: "/porcliente",
+    key: 3.2
+  },
+  {
+    name: "Últimos",
+    path: "/ultimos",
+    key: 3.3
+  },
+  {
+    name: "De hoy",
+    path: "/hoy",
+    key: 3.4
+  },
+];
+
+const analysis = [
+  {
+    name: "Anormales",
+    path: "/anormales",
+    key: 4.1
+  },
+  {
+    name: "Duplicados",
+    path: "/duplicados",
+    key: 4.2
+  },
+  {
+    name: "Iguales",
+    path: "/iguales",
+    key: 4.3
+  },
+ ];
+
 class App extends Component {
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+        invoices: true,
+        reports: true,
+        analysis: true,
+    };
+
+    this.xx = this.xx.bind(this);
+  }
+
+  submenu(par) {
+    return(
+        par.arr.map((route, index) => (
+          <MenuItem href={route.path} eventKey={route.key}>{route.name}</MenuItem>
+        )
+      )
+    )
+  }
+
+  xx(par) {
+    return(
+      <>
+      <NavItem onClick={() => this.setState(par.ret)}>{par.name}<Glyphicon glyph={par.st ? "chevron-up" : "chevron-down"} style={{float: "right"}} /></NavItem>
+      <Collapse in={par.st}>
+      <Nav bsStyle="pills" stacked>
+      {
+        par.arr.map((route, index) => (
+          <LinkContainer to={route.path}>
+            <NavItem eventKey={route.key}>{route.name}</NavItem>
+          </LinkContainer>
+        ))
+      }
+      </Nav>
+      </Collapse>
+      </>
+    );
+  };
 
   render() {
     return (
@@ -34,24 +140,51 @@ class App extends Component {
           Página de inicio
         </NavItem>
       </LinkContainer>
-      <LinkContainer to={'/lorem'}>
-        <NavItem eventKey={2} title="Lorem">
-          Lorem
-        </NavItem>
-      </LinkContainer>
-      <LinkContainer to={'/ipsum'}>
-        <NavItem eventKey={3} disabled>
-          Ipsum
-        </NavItem>
-      </LinkContainer>
+
+      <NavDropdown eventKey={2} title="Facturas" id="basic-nav-dropdown">
+        <this.submenu arr={invoices} />
+      </NavDropdown>
+
+      <NavDropdown eventKey={3} title="Reportes" id="basic-nav-dropdown">
+        <this.submenu arr={reports} />
+      </NavDropdown>
+
+      <NavDropdown eventKey={4} title="Análisis" id="basic-nav-dropdown">
+        <this.submenu arr={analysis} />
+      </NavDropdown>
+
       <LinkContainer to={'/about'}>
-        <NavItem eventKey={4}>
+        <NavItem eventKey={5}>
           Acerca de
         </NavItem>
       </LinkContainer>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
+    <Nav bsStyle="pills" stacked>
+      <LinkContainer exact to={'/'}>
+        <NavItem eventKey={1}>
+          Página de inicio
+        </NavItem>
+      </LinkContainer>
+      <NavItem eventKey={0} />
+
+      <this.xx name="Facturas" arr={invoices} st={this.state.invoices} ret={{invoices: !this.state.invoices}} />
+      <NavItem eventKey={0} />
+
+      <this.xx name="Reportes" arr={reports} st={this.state.reports} ret={{reports: !this.state.reports}} />
+      <NavItem eventKey={0} />
+
+      <this.xx name="Análisis" arr={analysis} st={this.state.analysis} ret={{analysis: !this.state.analysis}} />
+      <NavItem eventKey={0} />
+
+      <LinkContainer to={'/about'}>
+        <NavItem eventKey={5}>
+          Acerca de
+        </NavItem>
+      </LinkContainer>
+    </Nav>
+
 <main>
             <Routes />
 </main>
