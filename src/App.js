@@ -8,6 +8,9 @@ import {
   NavDropdown,
   NavItem,
   //NavLink
+  Grid,
+  Row,
+  Col,
 } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -124,9 +127,9 @@ class App extends Component {
 
   render() {
     return (
-    <Router>
-    <div>
-<Navbar collapseOnSelect>
+<Router>
+<>
+<Navbar collapseOnSelect fluid>
   <Navbar.Header>
     <Navbar.Brand>
       <a href="/"><img src={logo} alt="logo" title="Esqueletito" height="32" width="32" style={{float: "left", "margin-top": -6, "margin-left": -12, "margin-right": 6}} />&nbsp;&nbsp;Esqueletito</a>
@@ -161,10 +164,14 @@ class App extends Component {
     </Nav>
   </Navbar.Collapse>
 </Navbar>
+
+<Grid fluid>
+  <Row>
+  <Col xs={0} sm={2} md={2} ls={2}>
     <Nav bsStyle="pills" stacked>
       <LinkContainer exact to={'/'}>
         <NavItem eventKey={1}>
-          Página de inicio
+          Inicio
         </NavItem>
       </LinkContainer>
       <NavItem eventKey={0} />
@@ -184,12 +191,17 @@ class App extends Component {
         </NavItem>
       </LinkContainer>
     </Nav>
+  </Col>
+  <Col xs={12} sm={10} md={10} ls={10}>
 
 <main>
-            <Routes />
+    <Routes />
 </main>
-    </div>
-    </Router>
+  </Col>
+  </Row>
+  </Grid>
+</>
+</Router>
     );
   }
 }
