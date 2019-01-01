@@ -46,8 +46,19 @@ pre, code {
   background-color: #cc0066;
 }
 
+
+.nav >li >a:focus, .nav > li > a:hover {
+  background-color: #cc0066;
+  color: #dddddd;
+}
+
+.nav-pills > li.active >a, .nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  background-color: #aa0088;
+}
+
 .navbar {
-  font-size: 14pt;
+  font-size: 12pt;
   color: #d0d0d0;
   background-color: #440022;
   border-color: #220011;
@@ -88,6 +99,37 @@ pre, code {
     background-color: #660033;
 }
 
+.dropdown-menu {
+  background-color: #440022;
+}
+
+.dropdown-menu > li > a {
+  //background-color: #000000;
+  color: #eeeeee;
+}
+
+
+.nav-alt > li > a {
+  padding: 0.2em 8px 0.2em 8px;
+}
+
+.nav-alt2 > li > a {
+  padding: 0.2em 8px 0.2em 24px;
+}
+
+
+.nav-null {
+  padding: 0.2em 8px 0.5em 8px;
+  cursor: default;
+}
+
+.nav-null:focus, .nav-null:hover,
+.nav-null > a:focus, .nav-null:hover > a:hover,
+a.nav-null, a.nav-null {
+  background-color: #000000 !important;
+  border: none;
+  cursor: default;
+}
 
 /*                   _)     |
     _ \\ \ / -_)  _|_||  _` |  -_)
