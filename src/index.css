@@ -220,6 +220,20 @@ a.nav-null, a.nav-null {
   -o-background-size: cover;
 }
 
+.not-found {
+  color: #aa0088;
+  font-size: 5em;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0.25em 0.5em 24px #808080;
+}
+
+.not-found > h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  text-shadow: 0.04em 0.1em 20px #808080;
+}
+
 .row-cards {
   margin-right: -32px;
   margin-left: -32px;
