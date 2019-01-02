@@ -128,7 +128,6 @@ class About extends Component {
 
   render() {
       return (
-<div className="full full-about">
 <Grid className="col-10 col-xs-offset-1">
   <Row>
 <Fade in={this.state.pop} appear={false} timeout={500}>
@@ -223,7 +222,6 @@ class About extends Component {
     </div>
   </Row>
 </Grid>
-</div>
     );
   }
 }

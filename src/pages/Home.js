@@ -25,7 +25,6 @@ class Home extends Component {
 
   render() {
       return (
-<div className="full">
 <Grid className="col-10 col-xs-offset-1">
   <Row>
 <Fade in={this.state.pop} appear={false} timeout={500}>
@@ -74,7 +73,6 @@ Possimus eum fugit unde neque aut incidunt nisi velit. Laboriosam corrupti moles
     </Col>
   </Row>
 </Grid>
-</div>
     );
   }
 }

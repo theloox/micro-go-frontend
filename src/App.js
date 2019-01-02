@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, Switch } from "react-router-dom";
+
 import {
   Collapse,
   Glyphicon,
@@ -195,7 +197,20 @@ class App extends Component {
   <Col xs={12} sm={10} md={10} ls={10} className="padding-0">
 
 <main>
+  <Switch>
+    <Route path="/about"
+      render={() =>
+  <div className="full full-about">
     <Routes />
+  </div>
+      } />
+    <Route
+      render={() =>
+  <div className="full">
+    <Routes />
+  </div>
+      } />
+  </Switch>
 </main>
   </Col>
   </Row>
