@@ -192,7 +192,7 @@ class App extends Component {
       </LinkContainer>
     </Nav>
   </Col>
-  <Col xs={12} sm={10} md={10} ls={10}>
+  <Col xs={12} sm={10} md={10} ls={10} className="padding-0">
 
 <main>
     <Routes />
