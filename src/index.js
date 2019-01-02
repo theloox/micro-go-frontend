@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import './index.css';
+import './fonts/nunito-v9-latin-regular.woff2';
+import './fonts/inconsolata-v16-latin-regular.woff2';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

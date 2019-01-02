@@ -187,6 +187,19 @@ class About extends Component {
   </Row>
   <Row>
     <div className="blob-head trans">
+      Google Web Fonts
+    </div>
+    <div className="blob trans">
+      <h3><a href="http://scripts.sil.org/OFL" rel="noopener noreferrer" className="fas fa-external-link"> SIL OPEN FONT LICENSE</a></h3>
+      <ul>
+        <li><a href="https://fonts.google.com/specimen/Fjalla+One" rel="noopener noreferrer" className="fas fa-external-link"> Fjalla One</a></li>
+        <li><a href="https://fonts.google.com/specimen/Inconsolata" rel="noopener noreferrer" className="fas fa-external-link"> Inconsolata</a></li>
+        <li><a href="https://fonts.google.com/specimen/Nunito" rel="noopener noreferrer" className="fas fa-external-link"> Nunito</a></li>
+      </ul>
+    </div>
+  </Row>
+  <Row>
+    <div className="blob-head trans">
       <h2>NASA images</h2>
       </div>
     <div className="blob trans">
