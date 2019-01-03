@@ -134,7 +134,7 @@ class App extends Component {
 <Navbar collapseOnSelect fluid>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="/"><img src={logo} alt="logo" title="Esqueletito" height="32" width="32" style={{float: "left", "margin-top": -6, "margin-left": -12, "margin-right": 6}} />&nbsp;&nbsp;Esqueletito</a>
+      <a href="/"><img src={logo} alt="logo" title="Esqueletito" height="32" width="32" style={{float: "left", marginTop: -6, marginLeft: -12, marginRight: 6}} />&nbsp;&nbsp;Esqueletito</a>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
