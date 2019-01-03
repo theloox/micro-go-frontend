@@ -176,6 +176,10 @@ a.nav-null, a.nav-null {
   cursor: default;
 }
 
+.table-hover>tbody>tr:hover {
+  background-color: #f5d5f5;
+}
+
 
 /*                   _)     |
     _ \\ \ / -_)  _|_||  _` |  -_)
