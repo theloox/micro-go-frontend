@@ -13,7 +13,7 @@ class Routes extends React.Component {
         <Route path="/about" component={About} />
         <Route
           render={function() {
-            return <div class="not-found"><h1>404</h1> Not Found</div>;
+            return <div className="not-found"><h1>404</h1> Not Found</div>;
           }}
         />
       </Switch>
