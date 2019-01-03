@@ -102,7 +102,7 @@ class App extends Component {
   submenu(par) {
     return(
         par.arr.map((route, index) => (
-          <MenuItem href={route.path} eventKey={route.key}>{route.name}</MenuItem>
+          <MenuItem href={route.path} eventKey={route.key} key={route.key}>{route.name}</MenuItem>
         )
       )
     )
@@ -116,7 +116,7 @@ class App extends Component {
       <Nav bsStyle="pills" stacked className="nav-alt2">
       {
         par.arr.map((route, index) => (
-          <LinkContainer to={route.path}>
+          <LinkContainer to={route.path} key={route.key}>
             <NavItem eventKey={route.key}>{route.name}</NavItem>
           </LinkContainer>
         ))
