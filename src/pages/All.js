@@ -84,7 +84,7 @@ class All extends Component {
   componentDidMount() {
     setTimeout(() => { this.setState({pop: true}) }, 100);
 
-    fetch('http://svc.e-shell.tk:12002/all')
+    fetch('http://example.e-shell.tk:12002/all')
         .then((response) => response.json())
         .then((ret) => { this.setState({et: ret.results}) })
         .catch((error) => { this.setState({err: error}); console.error(error)})
